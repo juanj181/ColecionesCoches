@@ -6,6 +6,7 @@ package colecciones;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  *
@@ -18,6 +19,8 @@ public class Colecciones {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        String entradaTeclado;
 
         List<Coche> coches = new ArrayList<>();
         Coche coche1 = new Coche(Marca.Ford, "Focus", 1000, "48599967C");
@@ -38,6 +41,22 @@ public class Colecciones {
 
         for (int i = 0; i < coches.size(); i++) {
             System.out.println(coches.get(i).getMarca()+" "+coches.get(i).getModelo());
+        }
+        
+        
+        System.out.println("Introduzca un dni: ");
+         Scanner entradaEscaner = new Scanner (System.in);
+         
+         entradaTeclado = entradaEscaner.nextLine ();
+         //entradaTeclado = (String).System.read;
+         
+         for (int i = 0; i < coches.size(); i++) {
+            // System.out.println(coches.get(i).getModelo());
+            // System.out.println(coches.get(i).getDniPropietario());
+             
+            if(entradaTeclado.equals(coches.get(i).getDniPropietario()) ){
+                System.out.println(coches.get(i).getModelo());
+            }
         }
 
     }
