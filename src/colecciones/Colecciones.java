@@ -61,12 +61,12 @@ public class Colecciones {
         Scanner entradaEscaner = new Scanner(System.in);
         entradaTeclado = entradaEscaner.nextLine();
 
-         //for (String clave : mapCoches.keySet()) {
-        Set<String> clave = mapCoches.keySet();
-         Coche valor = mapCoches.get(clave);
-         //  System.out.println(valor.getDniPropietario());
-         if(entradaTeclado.equals(clave))
-             System.out.println("");
+        
+        // Set<String> clave = mapCoches.keySet();
+         Coche valor = mapCoches.get(entradaTeclado);
+      
+         System.out.println(valor.getMarca()+" "+ valor.getModelo());
+        
     }
              
             
