@@ -32,6 +32,13 @@ public class Colecciones {
         coches.add(coche3);
         coches.add(coche4);
         coches.add(coche5);
-        
+
+        System.out.println(coche1.getMarca());
+
+
+        for (int i = 0; i < coches.size(); i++) {
+            System.out.println(coches.get(i).getMarca()+" "+coches.get(i).getModelo());
+        }
+
     }
 }
