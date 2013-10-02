@@ -28,7 +28,7 @@ public class Colecciones {
         
         List<Coche> coches = new ArrayList<>();
         Coche coche1 = new Coche(Marca.Ford, "Focus", 1000, "48599967C");
-        Coche coche2 = new Coche(Marca.Ford, "Mustang", 2500, "588874Z");
+        Coche coche2 = new Coche(Marca.Ford, "Mustang", 2500, "12345678Z");
         Coche coche3 = new Coche(Marca.Citroen, "Xsara", 1200, "988875B");
         Coche coche4 = new Coche(Marca.Seat, "Toledo", 1500, "9866354X");
         Coche coche5 = new Coche(Marca.Renault, "Almera", 1200, "9876648C");
@@ -46,7 +46,11 @@ public class Colecciones {
         mapCoches.put(coche3.getDniPropietario(),coche3);
         mapCoches.put(coche4.getDniPropietario(),coche4);
         mapCoches.put(coche5.getDniPropietario(),coche5);
-
+        
+        
+        Coche i = mapCoches.get("12345678Z");
+        System.out.println(i.getModelo()+" "+i.getMarca()+" "+i.getCilindrada());
+/*
         System.out.println(coche1.getMarca());
 
 
@@ -73,7 +77,7 @@ public class Colecciones {
              }
             
         }
-         
+         */
 
     }
 }
