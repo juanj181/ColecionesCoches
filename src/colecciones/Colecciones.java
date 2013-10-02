@@ -5,7 +5,9 @@
 package colecciones;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -21,7 +23,9 @@ public class Colecciones {
         // TODO code application logic here
         
         String entradaTeclado;
-
+        
+        Map<String, Coche> mapCoches = new HashMap<>();
+        
         List<Coche> coches = new ArrayList<>();
         Coche coche1 = new Coche(Marca.Ford, "Focus", 1000, "48599967C");
         Coche coche2 = new Coche(Marca.Ford, "Mustang", 2500, "588874Z");
@@ -29,12 +33,19 @@ public class Colecciones {
         Coche coche4 = new Coche(Marca.Seat, "Toledo", 1500, "9866354X");
         Coche coche5 = new Coche(Marca.Renault, "Almera", 1200, "9876648C");
 
-
+        //añadimos a la lista los objetos.
         coches.add(coche1);
         coches.add(coche2);
         coches.add(coche3);
         coches.add(coche4);
         coches.add(coche5);
+        
+        //añadimos al map los objetos.
+        mapCoches.put(coche1.getDniPropietario(),coche1);
+        mapCoches.put(coche2.getDniPropietario(),coche2);
+        mapCoches.put(coche3.getDniPropietario(),coche3);
+        mapCoches.put(coche4.getDniPropietario(),coche4);
+        mapCoches.put(coche5.getDniPropietario(),coche5);
 
         System.out.println(coche1.getMarca());
 
