@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 
 /**
  *
@@ -53,11 +54,26 @@ public class Colecciones {
 
         for (String clave : mapCoches.keySet()) {
             Coche valor = mapCoches.get(clave);
-            System.out.println(clave + " = " + valor.getMarca() +" "+ valor.getModelo());
+            System.out.println(clave + " = " + valor.getMarca() + " " + valor.getModelo());
         }
 
-        /*
-         System.out.println(coche1.getMarca());
+        System.out.println("Introduzca un dni: ");
+        Scanner entradaEscaner = new Scanner(System.in);
+        entradaTeclado = entradaEscaner.nextLine();
+
+         //for (String clave : mapCoches.keySet()) {
+        Set<String> clave = mapCoches.keySet();
+         Coche valor = mapCoches.get(clave);
+         //  System.out.println(valor.getDniPropietario());
+         if(entradaTeclado.equals(clave))
+             System.out.println("");
+    }
+             
+            
+         
+         
+         /*
+          System.out.println(coche1.getMarca());
 
 
          for (int i = 0; i < coches.size(); i++) {
@@ -80,10 +96,15 @@ public class Colecciones {
          for (int i = 0; i < coches.size(); i++) {
          if(coches.get(i).getMarca().equals(Marca.Ford)){
          System.out.println(coches.get(i).getModelo()+" "+coches.get(i).getDniPropietario()+" "+coches.get(i).getCilindrada());
-         }
-            
-         }
-         */
-
-    }
+        
+        * 
+        * 
+        * 
+        * 
+        * */
 }
+            
+         
+         
+             
+
