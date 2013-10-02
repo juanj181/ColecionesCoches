@@ -51,13 +51,18 @@ public class Colecciones {
          //entradaTeclado = (String).System.read;
          
          for (int i = 0; i < coches.size(); i++) {
-            // System.out.println(coches.get(i).getModelo());
-            // System.out.println(coches.get(i).getDniPropietario());
              
             if(entradaTeclado.equals(coches.get(i).getDniPropietario()) ){
                 System.out.println(coches.get(i).getModelo());
             }
         }
+         for (int i = 0; i < coches.size(); i++) {
+             if(coches.get(i).getMarca().equals(Marca.Ford)){
+                 System.out.println(coches.get(i).getModelo()+" "+coches.get(i).getDniPropietario()+" "+coches.get(i).getCilindrada());
+             }
+            
+        }
+         
 
     }
 }
